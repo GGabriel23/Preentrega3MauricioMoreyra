@@ -1,0 +1,260 @@
+:root{
+    --titulos:'Arima Madurai', cursive;
+    --parrafos: 'Murish' , sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    /**1 rem = 10 px**/
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6;
+    overflow-x: hidden;
+}
+
+*,*::after, *,*::before{    
+    box-sizing: inherit;
+}
+
+
+
+/**globales**/
+.conteinerNav{
+    max-width: 180rem;
+    margin: 0 auto;
+    width: 98%;
+}
+h1, h2 {
+    font-family: var(--titulos);
+}
+
+h3, p, a {
+    font-family: var(--parrafos);
+}
+
+.hidden {
+    display: none;
+}
+
+.btnClose {
+    font-size: 3rem;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    user-select: none;
+}
+
+.fullScreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+
+}
+
+@keyframes desplazamiento {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+.btnClose:hover{
+    cursor: pointer;
+}
+
+.btn{
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.border{
+    border: 4px solid;
+    color: whitesmoke;
+}
+
+.border:hover{
+    color: black;
+    background-color: white;
+}
+
+img{
+    max-width: 100%;
+}
+/**Heder**/
+.conteiner {
+    background-color: rgb(138, 30, 30);
+    position: relative;
+    z-index: 5;
+   
+}
+.conteinerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.navegation a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    color: blanchedalmond;
+    display: block;
+    transition: color .3s ease-in-out;
+    
+}
+
+@media(min-whidth:768px) {
+    .navegation a{
+        text-align: center;
+}
+}
+
+
+.navegation a:nth-child(even):hover{
+    color:aliceblue
+}
+
+.navegation a:nth-child(odd):hover{
+    color: blue;
+}
+
+.navegation a:first-of-type {
+    margin-top: 6.5rem;
+}
+
+.navegation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 35rem;
+    padding: 3rem 4rem;
+    background-color: brown;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+.logo h2 {
+    font-size: 3rem;
+    color: blanchedalmond;
+}
+
+.burger:hover{
+    cursor: pointer;
+}
+
+.burger span{
+    background-color: blanchedalmond;
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem;
+}
+
+/**video**/
+.contentHeader{
+    position: relative;
+}
+
+.contentHeader::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.textHeader{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textHeader {
+    color: white;
+    font-size: 4rem;
+}
+
+/**nosotros**/
+
+.image{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    object-fit: cover;
+    padding: 2rem;
+    grid-gap: 1rem;
+    min-width: 40rem;
+}
+
+.sobreNosotros{
+    text-align: center;
+}
+.imgg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.bienvenida{
+     font-size: 4rem;
+}
+.nosotros{
+    font-size: 3rem;
+}
+.nosotros1{
+    max-height: 100rem;
+}
+
+/**menu**/
+.textPlatos{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.bottonsPlatos button{
+    background-color: brown;
+    color: antiquewhite;
+    border: none;
+    display: inline-block;
+    font-size: 3rem;
+    font-family: var(--parrafos);
+    margin-bottom: 2rem;
+}
+
+.bottonsPlatos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    border-bottom: .5rem;
+}
